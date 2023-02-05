@@ -8,21 +8,21 @@
 #ifndef TIMER0_INT_H_
 #define TIMER0_INT_H_
 
-#define TIMER0_uint8_NON_PWM_NORMAL							0
-#define TIMER0_uint8_NON_PWM_TOGGLE							1
-#define TIMER0_uint8_NON_PWM_CLEAR							2
-#define TIMER0_uint8_NON_PWM_SET								3
+#define TIMER0_uint8_NON_PWM_NORMAL             0
+#define TIMER0_uint8_NON_PWM_TOGGLE             1
+#define TIMER0_uint8_NON_PWM_CLEAR              2
+#define TIMER0_uint8_NON_PWM_SET                3
 
-#define TIMER0_uint8FAST_PWM_NORMAL							0
-#define TIMER0_uint8FAST_PWM_CLEAR							2
-#define TIMER0_uint8FAST_PWM_SET								3
+#define TIMER0_uint8FAST_PWM_NORMAL             0
+#define TIMER0_uint8FAST_PWM_CLEAR              2
+#define TIMER0_uint8FAST_PWM_SET                3
 
-#define TIMER0_uint8PHASECORRECT_PWM_NORMAL			0
-#define TIMER0_uint8PHASECORRECT_PWM_CLEAR			2
-#define TIMER0_uint8PHASECORRECT_PWM_SET				3
+#define TIMER0_uint8PHASECORRECT_PWM_NORMAL     0
+#define TIMER0_uint8PHASECORRECT_PWM_CLEAR      2
+#define TIMER0_uint8PHASECORRECT_PWM_SET        3
 
-#define TIMER0_uint8INT_OVF											0
-#define TIMER0_uint8INT_COMP										1
+#define TIMER0_uint8INT_OVF                     0
+#define TIMER0_uint8INT_COMP                    1
 
 /********************************************************
 ** Function Name: TIMER0_enuInit                       **
