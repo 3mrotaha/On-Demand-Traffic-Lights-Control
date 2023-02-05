@@ -38,7 +38,7 @@
 ** Return Type: ErrorStates_t                           **
 ** Arguments: None                                      **
 ** Functionality: Initializes the Digital Input/Output  ** 
-**			module.                                         **
+**      module.                                         **
 *********************************************************/
 ErrorStates_t DIO_enuInit(void);
 
@@ -46,9 +46,9 @@ ErrorStates_t DIO_enuInit(void);
 ** Function Name: DIO_enuSetPortDir                     **
 ** Return Type: ErrorStates_t                           **
 ** Arguments: uint8 Copy_uint8PortID,                   **
-**			  uint8 Copy_uint8Value                         **
+**        uint8 Copy_uint8Value                         **
 ** Functionality: Sets the direction of a specific      **
-**				digital I/O port.                             **
+**        digital I/O port.                             **
 *********************************************************/
 ErrorStates_t DIO_enuSetPortDir(uint8 Copy_uint8PortID, uint8 Copy_uint8Value);
 
@@ -56,9 +56,9 @@ ErrorStates_t DIO_enuSetPortDir(uint8 Copy_uint8PortID, uint8 Copy_uint8Value);
 ** Function Name: DIO_enuSetPortValue                   **
 ** Return Type: ErrorStates_t                           **
 ** Arguments: uint8 Copy_uint8PortID,                   ** 
-**			  uint8 Copy_uint8Value                         **
+**        uint8 Copy_uint8Value                         **
 ** Functionality: Sets the value of a specific digital  **
-**				I/O port.                                     **
+**        I/O port.                                     **
 *********************************************************/
 ErrorStates_t DIO_enuSetPortValue(uint8 Copy_uint8PortID, uint8 Copy_uint8Value);
 
@@ -67,7 +67,7 @@ ErrorStates_t DIO_enuSetPortValue(uint8 Copy_uint8PortID, uint8 Copy_uint8Value)
 ** Return Type: ErrorStates_t                           **
 ** Arguments: uint8 Copy_uint8PortID                    **
 ** Functionality: Toggles the value of a specific       **
-**				digital I/O port.                             **
+**        digital I/O port.                             **
 *********************************************************/
 ErrorStates_t DIO_enuTogPortValue(uint8 Copy_uint8PortID);
 
@@ -75,9 +75,9 @@ ErrorStates_t DIO_enuTogPortValue(uint8 Copy_uint8PortID);
 ** Function Name: DIO_enuGetPortValue                   **
 ** Return Type: ErrorStates_t                           **
 ** Arguments: uint8 Copy_uint8PortID,                   **
-**			  uint8 *Copy_uint8Value                        **
+**        uint8 *Copy_uint8Value                        **
 ** Functionality: Gets the value of a specific          ** 
-**				 digital I/O port.                            **
+**         digital I/O port.                            **
 *********************************************************/
 ErrorStates_t DIO_enuGetPortValue(uint8 Copy_uint8PortID, uint8 *Copy_uint8Value);
 
@@ -85,10 +85,10 @@ ErrorStates_t DIO_enuGetPortValue(uint8 Copy_uint8PortID, uint8 *Copy_uint8Value
 ** Function Name: DIO_enuSetPinDir                      **
 ** Return Type: ErrorStates_t                           **
 ** Arguments: uint8 Copy_uint8PortID,                   **
-**			  uint8 Copy_uint8PinID,                        **
-**			  uint8 Copy_uint8Value                         **
+**        uint8 Copy_uint8PinID,                        **
+**        uint8 Copy_uint8Value                         **
 ** Functionality: Sets the direction of a specific      **
-**				digital I/O pin.                              **
+**        digital I/O pin.                              **
 *********************************************************/
 ErrorStates_t DIO_enuSetPinDir(uint8 Copy_uint8PortID, uint8 Copy_uint8PinID, uint8 Copy_uint8Value);
 
@@ -96,10 +96,10 @@ ErrorStates_t DIO_enuSetPinDir(uint8 Copy_uint8PortID, uint8 Copy_uint8PinID, ui
 ** Function Name: DIO_enuSetPinValue                    **
 ** Return Type: ErrorStates_t                           **
 ** Arguments: uint8 Copy_uint8PortID,                   ** 
-**			  uint8 Copy_uint8PinID,                        ** 
-**			  uint8 Copy_uint8Value                         **
+**        uint8 Copy_uint8PinID,                        ** 
+**        uint8 Copy_uint8Value                         **
 ** Functionality: Sets the value of a specific          **
-**				digital I/O pin.                              **
+**        digital I/O pin.                              **
 *********************************************************/
 ErrorStates_t DIO_enuSetPinValue(uint8 Copy_uint8PortID, uint8 Copy_uint8PinID, uint8 Copy_uint8Value);
 
@@ -107,9 +107,9 @@ ErrorStates_t DIO_enuSetPinValue(uint8 Copy_uint8PortID, uint8 Copy_uint8PinID, 
 ** Function Name: DIO_enuTogPinValue                    **
 ** Return Type: ErrorStates_t                           **
 ** Arguments: uint8 Copy_uint8PortID,                   ** 
-**			  uint8 Copy_uint8PinID                         **
+**        uint8 Copy_uint8PinID                         **
 ** Functionality: Toggles the value of a specific       **
-**				digital I/O pin.                              **
+**        digital I/O pin.                              **
 *********************************************************/
 ErrorStates_t DIO_enuTogPinValue(uint8 Copy_uint8PortID, uint8 Copy_uint8PinID);
 
@@ -117,10 +117,10 @@ ErrorStates_t DIO_enuTogPinValue(uint8 Copy_uint8PortID, uint8 Copy_uint8PinID);
 ** Function Name: DIO_enuSetPinValue                    **
 ** Return Type: ErrorStates_t                           **
 ** Arguments: uint8 Copy_uint8PortID,                   **
-**			  uint8 Copy_uint8PinID,                        **
-**			  uint8 *Copy_uint8Value                        **
+**        uint8 Copy_uint8PinID,                        **
+**        uint8 *Copy_uint8Value                        **
 ** Functionality: Gets the value of a specific          **
-**				digital I/O pin.                              **
+**        digital I/O pin.                              **
 *********************************************************/
 ErrorStates_t DIO_enuGetPinValue(uint8 Copy_uint8PortID, uint8 Copy_uint8PinID, uint8 *Copy_uint8Value);
 
