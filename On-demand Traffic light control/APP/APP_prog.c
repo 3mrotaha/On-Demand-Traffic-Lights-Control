@@ -112,40 +112,30 @@ static inline void carStop(void){
 	LED_enuTurnOFF(CAR_YELLOW_LED);
 	LED_enuTurnOFF(CAR_GREEN_LED);
 }
-/*
-	this function is used to lighted the RED led for the human to stop until the cars stop
-*/ 
+
 static inline void pedestrainStop(void){
 	LED_enuTurnON(PEDESTRAIN_RED_LED);
 	LED_enuTurnOFF(PEDESTRAIN_YELLOW_LED);
 	LED_enuTurnOFF(PEDESTRAIN_GREEN_LED);
 }
 
-/*
-	this function is used to lighten the Yellow led for the cars to be ready to go or stop
-*/
+
 static inline void carReady(void){
 	LED_enuToggleState(CAR_YELLOW_LED);
 }
 
-/*
-	this function is used to blinks the Yellow led for the human to be ready to go or stop
-*/
+
 static inline void pedestrainReady(void){
 	LED_enuToggleState(PEDESTRAIN_YELLOW_LED);
 }
 
-/*
-	this function is used to light the green led for the cars to pass
-*/ 
+
 static inline void carsPass(void){
 	LED_enuTurnON(CAR_GREEN_LED);
 	LED_enuTurnOFF(CAR_YELLOW_LED);
 	LED_enuTurnOFF(CAR_RED_LED);
 }
-/*
-	this function is used to lighten the green led for the human to pass
-*/
+
 static inline void pedestrainPass(void){
 	LED_enuTurnOFF(PEDESTRAIN_RED_LED);
 	LED_enuTurnOFF(PEDESTRAIN_YELLOW_LED);

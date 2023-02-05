@@ -21,51 +21,86 @@
 #define BLINKING_TIME					250		// in milliseconds
 #define	BLINKING_COUNTS(TIME_FOR_LED, BLINK_TIME)	((uint32) ((TIME_FOR_LED/BLINK_TIME) + 1))
 
-/*
-	this function is used to initialize the application by initializing 
-	the used peripherals such as dio, timer, external interrupt and hardware used such as the led
-	and these peripherals are used to handle the program through interrupt service routine
-*/
+/**********************************************************
+** Function Name: App_enuStart							 **
+** Return Type: ErrorStates_t							 **
+** Arguments: None										 **
+** Functionality: Initializes the used peripherals such  **
+**		as DIO, timer, external interrupt and hardware	 **
+**		like LED to handle the program through ISR		 **
+**********************************************************/
 ErrorStates_t App_enuStart(void);
 
-/*
-	this function is used to handle the process happens after the human press the button to
-	pass the street. 
-	it makes the program enters the pedestrian mode.
-*/
+/**********************************************************
+** Function Name: on_Press								 **
+** Return Type: void									 **
+** Arguments: None										 **
+** Functionality: Handles the process after human presses**
+**			 the button to pass the street by entering	 **
+**			 pedestrian mode.							 **
+**********************************************************/
 void on_Press(void);
 
-/*
-	this function helps the start function to switch between the traffic lights every 5 s, changes the flags
-	according to the current state of the traffic lights
-*/
+/**********************************************************
+** Function Name: changeTrafficLed						 **
+** Return Type: void									 **
+** Arguments: None										 **
+** Functionality: Helps the start function switch between**
+** the traffic lights every 5 s and change the flags	 **
+** according to the current state of the traffic lights. **	
+**********************************************************/
 void changeTrafficLed(void);
 
-/*
-	this function is used to lighten the RED led for the card to stop
-*/
+/**********************************************************
+** Function Name: carStop								 **
+** Return Type: static inline void						 **
+** Arguments: None										 **
+** Functionality: Lights the RED LED for the car to stop.**
+**********************************************************/
 static inline void carStop(void);
-/*
-	this function is used to lighted the RED led for the human to stop until the cars stop
-*/ 
+
+/**********************************************************
+** Function Name: pedestrainStop						 **
+** Return Type: static inline void						 **
+** Arguments: None										 **
+** Functionality: Lights the RED LED for the pedestrian  **
+** to stop until cars stop.								 **
+**********************************************************/
 static inline void pedestrainStop(void);
 
-/*
-	this function is used to lighten the Yellow led for the cars to be ready to go or stop
-*/
+/**********************************************************
+** Function Name: carReady								 **
+** Return Type: static inline void						 **
+** Arguments: None										 **
+** Functionality: Lights the YELLOW LED for the car to be**
+**				  ready to go or stop.					 **
+**********************************************************/
 static inline void carReady(void);
 
-/*
-	this function is used to blinks the Yellow led for the human to be ready to go or stop
-*/
+/**********************************************************
+** Function Name: pedestrainReady						 **
+** Return Type: static inline void						 **
+** Arguments: None										 **
+** Functionality: Blinks the YELLOW LED for the			 **
+**				  pedestrian to be ready to go or stop.  **
+**********************************************************/
 static inline void pedestrainReady(void);
 
-/*
-	this function is used to light the green led for the cars to pass
-*/ 
+/**********************************************************
+** Function Name: carsPass								 **
+** Return Type: static inline void						 **
+** Arguments: None										 **
+** Functionality: Lights the GREEN LED for the cars to	 ** 
+**			     pass.									 **
+**********************************************************/ 
 static inline void carsPass(void);
-/*
-	this function is used to lighten the green led for the human to pass
-*/
+
+/**********************************************************
+** Function Name: pedestrainPass						 **
+** Return Type: void									 **
+** Arguments: None										 **
+** Functionality: Lightens the green led for the		 **
+**				  human to pass.						 **
+**********************************************************/
 static inline void pedestrainPass(void);
 #endif /* APP_INT_H_ */
