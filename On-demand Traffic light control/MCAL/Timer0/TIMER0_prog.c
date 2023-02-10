@@ -8,6 +8,7 @@
 
 #include "../../LIB/std_types.h"
 #include "../../LIB/Bit_Level.h"
+#include "../../LIB/ErrorStates.h"
 #include "../../LIB/GPRs.h"
 
 #include "../DIO/DIO_int.h"

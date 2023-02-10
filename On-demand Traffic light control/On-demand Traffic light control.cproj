@@ -20,10 +20,10 @@
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress />
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
     <ResetRule>0</ResetRule>
     <eraseonlaunchrule>0</eraseonlaunchrule>
@@ -40,6 +40,19 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtoolserialnumber />
+    <avrdeviceexpectedsignature>0x1E9502</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -126,6 +139,18 @@
     <Compile Include="APP\APP_prog.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="HAL\DIO\hal_dio_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\DIO\hal_dio_prog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EX_Interrupt\hal_exint_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EX_Interrupt\hal_exint_prog.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\LED\LED_config.c">
       <SubType>compile</SubType>
     </Compile>
@@ -139,6 +164,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\LED\LED_prog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Timer0\hal_timer0_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Timer0\hal_timer0_prog.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="LIB\Bit_Level.h">
@@ -200,6 +231,9 @@
     <Folder Include="HAL" />
     <Folder Include="APP" />
     <Folder Include="HAL\LED" />
+    <Folder Include="HAL\DIO" />
+    <Folder Include="HAL\EX_Interrupt" />
+    <Folder Include="HAL\Timer0\" />
     <Folder Include="MCAL" />
     <Folder Include="LIB" />
     <Folder Include="MCAL\DIO" />

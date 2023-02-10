@@ -8,8 +8,6 @@
 #ifndef DIO_INT_H_
 #define DIO_INT_H_
 
-#include "../../LIB/ErrorStates.h"
-
 #define DIO_uint8_PIN0				0
 #define DIO_uint8_PIN1				1
 #define DIO_uint8_PIN2				2
