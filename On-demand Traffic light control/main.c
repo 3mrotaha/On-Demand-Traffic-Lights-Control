@@ -6,17 +6,21 @@
  */ 
 
 #include <avr/io.h>
-
+#include <util/delay.h>
 #include "LIB/std_types.h"
 #include "LIB/ErrorStates.h"
-#include "APP/APP_int.h"
-
+#include "MCAL/DIO/DIO_int.h"
 
 int main(void)
 {
+	// set pin direction in PORTA to output
+	DIO_enuSetPinDir(DIO_uint8_PORTA, DIO_uint8_PIN0, INPUT);
 	
-	App_enuStart();
-	
-	while(1);
+	// get the value on the pin 0 of port A
+	uint8 value; // a variable to store the value of the pin
+	DIO_enuGetPinValue(DIO_uint8_PORTA, DIO_uint8_PIN0, &value);
+	while(1){
+
+	}
 }
 
